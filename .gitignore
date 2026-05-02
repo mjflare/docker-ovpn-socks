@@ -1,0 +1,39 @@
+# Ignore environment files with secrets
+.env
+.env.local
+.env.*.local
+
+# Docker files
+.dockerignore
+
+# Logs
+logs/
+*.log
+
+# OpenVPN configs (security)
+*.ovpn
+config/
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Node
+node_modules/
+npm-debug.log
+
+# Git
+.git/
+.gitignore
