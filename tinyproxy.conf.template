@@ -1,0 +1,16 @@
+Listen 127.0.0.1
+Port {{PROXY_PORT}}
+Timeout 600
+DefaultErrorFile "/usr/share/tinyproxy/errorfiles/default.html"
+StatFile "/usr/share/tinyproxy/stats.html"
+LogFile "/var/log/tinyproxy/tinyproxy.log"
+LogLevel {{LOG_LEVEL}}
+PidFile "/var/run/tinyproxy/tinyproxy.pid"
+MaxClients 100
+MinSpareServers 5
+MaxSpareServers 20
+StartServers 10
+MaxRequestsPerChild 0
+ViaProxyName "tinyproxy"
+ConnectPort 443
+ConnectPort 563
