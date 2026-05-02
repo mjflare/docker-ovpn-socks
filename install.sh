@@ -74,10 +74,10 @@ read -p "📊 Log level [${DEFAULT_LOG_LEVEL}] (info/notice/warn/error): " LOG_L
 LOG_LEVEL=${LOG_LEVEL:-$DEFAULT_LOG_LEVEL}
 
 # Validate port number
-if ! [[ "$PROXY_PORT" =~ ^[0-9]+$ ]] || [ "$PROXY_PORT" -lt 1024 ] || [ "$PROXY_PORT" -gt 65535 ]; then
-    echo -e "${RED}❌ Invalid port number!${NC}"
-    exit 1
-fi
+#if ! [[ "$PROXY_PORT" =~ ^[0-9]+$ ]] || [ "$PROXY_PORT" -lt 1024 ] || [ "$PROXY_PORT" -gt 65535 ]; then
+#    echo -e "${RED}❌ Invalid port number!${NC}"
+#    exit 1
+#fi
 
 echo -e "${GREEN}✓ Configuration set${NC}"
 
