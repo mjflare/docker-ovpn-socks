@@ -21,5 +21,12 @@ COPY tinyproxy.conf.template /etc/tinyproxy/tinyproxy.conf.template
 # Expose proxy port (will be configurable)
 EXPOSE 8888
 
+RUN apk add --no-cache openvpn dante-server iproute2
+
+COPY entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
+
+CMD ["/entrypoint.sh"]
+
 # Use entrypoint script
 ENTRYPOINT ["/entrypoint.sh"]
